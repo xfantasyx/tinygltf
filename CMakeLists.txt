@@ -62,9 +62,9 @@ endif (TINYGLTF_HEADER_ONLY)
 
 if (TINYGLTF_INSTALL)
   install(TARGETS tinygltf EXPORT tinygltfTargets)
-  install(EXPORT tinygltfTargets NAMESPACE tinygltf:: FILE TinyGLTFTargets.cmake DESTINATION cmake/tinygltf)
+  install(EXPORT tinygltfTargets NAMESPACE tinygltf:: FILE TinyGLTFTargets.cmake DESTINATION cmake)
   configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/TinyGLTFConfig.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/TinyGLTFConfig.cmake INSTALL_DESTINATION cmake)
-  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/TinyGLTFConfig.cmake DESTINATION cmake/tinygltf)
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/TinyGLTFConfig.cmake DESTINATION cmake)
   # Do not install .lib even if !TINYGLTF_HEADER_ONLY
 
   INSTALL ( FILES
